@@ -1,7 +1,7 @@
 var interests = ["Web App Security", "Bug Bounties", "Ethical Hacking/Pentesting", "CTFs", "Go/Rust", "Command-Line Tools", "Docker/Containerization"];
 var cycle = 0;
 
-function print(rand = true)
+function printList(rand = true)
 {
     var ul = document.getElementById("interests");
     if(ul.innerHTML != "")
@@ -53,7 +53,7 @@ function sort()
             interests.sort(function(a, b) { return a.length < b.length; });
             break;
     }
-    print(false);
+    printList(false);
     cycle++;
 
     if(cycle > 2)
@@ -62,4 +62,4 @@ function sort()
     }
 }
 
-print();
+printList();
