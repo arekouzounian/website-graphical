@@ -44,19 +44,22 @@ function sort()
     switch(cycle)
     {
         case 0:
-            interests.sort();
-            break;
-        case 1:
             interests.sort(function(a, b) { return a.length > b.length; });
             break;
-        case 2:
-            interests.sort(function(a, b) { return a.length < b.length; });
+        case 1:
+            interests.sort(function(a, b) { return a.length < b.length; });           
             break;
+        case 2:
+            interests.sort(function(a, b) { return a.toLowerCase() > b.toLowerCase(); });
+            break;
+        case 3:
+            interests.sort(function(a, b) { return a.toLowerCase() < b.toLowerCase(); });
+
     }
     printList(false);
     cycle++;
 
-    if(cycle > 2)
+    if(cycle > 3)
     {
         cycle = 0; 
     }
