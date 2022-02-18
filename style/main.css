@@ -1,10 +1,15 @@
 body {
     background-color: rgb(26, 31, 59);
-    font-family: monospace;
+    font-family: Monospace;
     font-size: 20px;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 2%;
     color: rgb(106, 212, 226);
+}
+
+#wrapper {
+    width: 64%;
+    margin: 0 auto;
 }
 
 a,
@@ -19,6 +24,10 @@ h1 {
     color: greenyellow;
 }
 
+#main {
+    margin-top: 10%;
+}
+
 #navbar li {
     display: inline;
     margin: 0;
@@ -27,6 +36,10 @@ h1 {
 
 #navbar ul {
     padding-left: 0;
+}
+
+#projects {
+    text-align: justify;
 }
 
 button {
@@ -48,7 +61,14 @@ ul {
     text-align: center;
 }
 
-footer {
+#navbar a:hover {
+    border-style: solid;
+    padding:8px; 
+    background-color: black;
+    color: rgb(0, 255, 0);
+}
+
+#terminalSwitch {
     padding-top: 10%;
     opacity: 64%;
 }
