@@ -1,4 +1,4 @@
-var interests = ["Web App Security", "Bug Bounties", "Ethical Hacking/Pentesting", "CTFs", "Go/Rust", "Command-Line Tools", "Docker/Containerization"];
+var interests = ["Kotlin", "Bug Bounties", "CTFs", "Rust", "Command-Line Tools", "Containerization", "Consumer Technology", "Arch Linux"];
 var cycle = 0;
 
 function printList(rand = true)

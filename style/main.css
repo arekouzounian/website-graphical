@@ -61,7 +61,7 @@ ul {
     text-align: center;
 }
 
-#navbar a:hover {
+a.highlight:hover {
     border-style: solid;
     padding:8px; 
     background-color: black;
