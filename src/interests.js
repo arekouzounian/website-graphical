@@ -1,5 +1,20 @@
-var interests = ["Kotlin", "Bug Bounties", "CTFs", "Rust", "Command-Line Tools", "Containerization", "Consumer Technology", "Arch Linux"];
+var interests = []; 
 var cycle = 0;
+const port = 5000; 
+const endpoint = '/api/v1/interests';
+
+async function getInterests()
+{
+    let url = window.location.origin + ':' + port + endpoint; 
+    //console.log(url);
+    await fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            for (var i in data) {
+                interests.push(data[i]);
+            }
+        });
+}
 
 function printList(rand = true)
 {
@@ -13,7 +28,6 @@ function printList(rand = true)
         }
     }
         
-
     for( var i = 0; i < interests.length; i++ ) {
         var li = document.createElement('li');
         li.classList.add('fade-in');
@@ -65,4 +79,9 @@ function sort()
     }
 }
 
-printList();
+async function init() {
+    await getInterests(); 
+    printList(); 
+}
+
+init(); 
