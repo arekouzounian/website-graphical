@@ -1,4 +1,4 @@
-var interests = []; 
+var debug = false; 
 var cycle = 0;
 const port = 5000; 
 const endpoint = '/api/v1/interests';
@@ -80,7 +80,11 @@ function sort()
 }
 
 async function init() {
-    await getInterests(); 
+    interests = ['Vim (not Emacs)', 'CTFs', 'Rust/Go', 'Command-Line Tools', 'Linux', 'Containerization', 'Open-Source Software'];
+    if (debug)
+    {
+        await getInterests(); 
+    }
     printList(); 
 }
 

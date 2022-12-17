@@ -1,7 +1,10 @@
+const debug = false; 
+
+const origin = 'https://api.arekouzounian.com/';
 
 async function constructPage(endpoint, port, id)
 {
-	let url = window.location.origin + ':' + port + endpoint; 
+	let url = origin + ':' + port + endpoint; 
 	let field = document.getElementById(id); 
 
 	await fetch(url)

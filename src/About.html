@@ -29,7 +29,10 @@
 
 		<script type='text/javascript' src='./construct-page.js'></script>
 		<script>
-			constructPage('/api/v1/about', 5000, 'about-content'); 
+            if (debug) 
+            {
+                constructPage('/api/v1/about', 5000, 'about-content'); 
+            }
 		</script>
 
     </body>
