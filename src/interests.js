@@ -1,16 +1,17 @@
-var debug = false; 
+var debug = true; 
 var cycle = 0;
 const port = 5000; 
 const endpoint = '/api/v1/interests';
+const host = 'http://api.arekouzounian.com';
 
 async function getInterests()
 {
-    let url = window.location.origin + ':' + port + endpoint; 
-    //console.log(url);
+    let url = host + endpoint; 
     await fetch(url)
         .then(response => response.json())
         .then(data => {
             for (var i in data) {
+
                 interests.push(data[i]);
             }
         });
@@ -83,6 +84,7 @@ async function init() {
     interests = ['Vim (not Emacs)', 'CTFs', 'Rust/Go', 'Command-Line Tools', 'Linux', 'Containerization', 'Open-Source Software'];
     if (debug)
     {
+        interests = [];
         await getInterests(); 
     }
     printList(); 

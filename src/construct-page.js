@@ -1,10 +1,8 @@
-const debug = false; 
+const origin = 'http://api.arekouzounian.com';
 
-const origin = 'https://api.arekouzounian.com/';
-
-async function constructPage(endpoint, port, id)
+async function constructPage(endpoint, id)
 {
-	let url = origin + ':' + port + endpoint; 
+	let url = origin + endpoint; 
 	let field = document.getElementById(id); 
 
 	await fetch(url)
@@ -19,5 +17,4 @@ async function constructPage(endpoint, port, id)
 		});
 }
 
-// constructPage("/api/v1/about", 5000, 'test-fill');  
 
