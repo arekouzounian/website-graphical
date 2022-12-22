@@ -1,4 +1,4 @@
-const origin = 'http://api.arekouzounian.com';
+const origin = 'https://api.arekouzounian.com';
 
 async function constructPage(endpoint, id)
 {

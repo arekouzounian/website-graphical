@@ -2,7 +2,7 @@ var debug = true;
 var cycle = 0;
 const port = 5000; 
 const endpoint = '/api/v1/interests';
-const host = 'http://api.arekouzounian.com';
+const host = 'https://api.arekouzounian.com';
 
 async function getInterests()
 {
