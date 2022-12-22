@@ -1,6 +1,6 @@
 const origin = 'https://api.arekouzounian.com';
 
-async function constructPage(endpoint, id)
+async function constructAbout(endpoint, id)
 {
 	let url = origin + endpoint; 
 	let field = document.getElementById(id); 
