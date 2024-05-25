@@ -14,6 +14,8 @@ async function constructAbout(endpoint, id)
 				node.innerText += data[p]; 
 				field.appendChild(node); 
 			}
+
+			fadeIn(field); 
 		});
 }
 

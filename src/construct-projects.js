@@ -29,5 +29,7 @@ async function constructProjects(id)
 
                 field.appendChild(node);
             }
+
+            fadeIn(field); 
         });
 }
